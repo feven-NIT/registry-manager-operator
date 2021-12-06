@@ -18,7 +18,7 @@ operator-sdk init --plugins=ansible --domain example.com
 ```
 
 ``` 
-operator-sdk create api --group cache --version v1alpha1 --kind registry-manager-operator --generate-role 
+operator-sdk create api --group cache --version v1alpha1 --kind Registry-manager-operator --generate-role 
 ```
 
 ## Create the ansible tasks to manage quay creation and deletion of repository in roles/quay/tasks/main.yml
