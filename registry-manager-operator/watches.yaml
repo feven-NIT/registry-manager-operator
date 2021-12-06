@@ -1,0 +1,11 @@
+---
+# Use the 'create api' subcommand to add watches to this file.
+- version: v1alpha1
+  group: cache.example.com
+  kind: Quay-operator-custom
+  role: quay-operator-custom
+  finalizer:
+    name: cache.example.com/finalizer
+    vars:
+      state: absent
+       

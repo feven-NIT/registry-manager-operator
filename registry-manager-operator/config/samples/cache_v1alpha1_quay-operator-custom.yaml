@@ -1,0 +1,11 @@
+apiVersion: cache.example.com/v1alpha1
+kind: Quay-operator-custom
+metadata:
+  name: reponame-demo4
+spec:
+  token: IZAro7mnL7cihYYbOdCy7vUbkyulh3dz3KHj0q5N
+  namespace : feven
+  visibility: public
+  repository: reponame-demo4
+  image: image
+
