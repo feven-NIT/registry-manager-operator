@@ -18,14 +18,14 @@ operator-sdk init --plugins=ansible --domain example.com
 ```
 
 ``` 
-operator-sdk create api --group cache --version v1alpha1 --kind Registry-manager-operator --generate-role 
+operator-sdk create api --group cache --version v1alpha1 --kind QuayRegistry --generate-role 
 ```
 
-## Create the ansible tasks to manage quay creation and deletion of repository in roles/quay/tasks/main.yml
+## Create the ansible tasks to manage quay creation and deletion of repository in roles/quayregistry/tasks/main.yml
 
 ```
---
-# tasks file for QuayRegister
+---
+# tasks file for QuayRegistry
 
 - name: check if image exist
   uri:
@@ -76,10 +76,10 @@ operator-sdk create api --group cache --version v1alpha1 --kind Registry-manager
 Then update the quayregister sample in config/samples/cache_v1alpha1_memcached.yaml
 
 ```
-apiVersion: cache.example2.com/v1alpha1
-kind: QuayRegister
+apiVersion: cache.example.com/v1alpha1
+kind: QuayRegistry
 metadata:
-  name: quayregister-sample
+  name: quayregistery-sample
 spec:
   token: <your-quay-token>
   namespace : <your-quay-namespace>
@@ -94,11 +94,11 @@ Finally update the watches.yaml to delete repositories when you delete your ress
 ---
 # Use the 'create api' subcommand to add watches to this file.
 - version: v1alpha1
-  group: cache.example2.com
-  kind: QuayRegister
-  role: quayregister
+  group: cache.example.com
+  kind: QuayRegistry
+  role: quayregistry
   finalizer:
-    name: cache.example2.com/finalizer
+    name: cache.example.com/finalizer
     vars:
       state: absent                     
 ```

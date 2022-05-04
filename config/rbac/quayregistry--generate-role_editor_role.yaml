@@ -1,0 +1,24 @@
+# permissions for end users to edit quayregistry--generate-roles.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: quayregistry--generate-role-editor-role
+rules:
+- apiGroups:
+  - cache.example.com
+  resources:
+  - quayregistry--generate-roles
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cache.example.com
+  resources:
+  - quayregistry--generate-roles/status
+  verbs:
+  - get

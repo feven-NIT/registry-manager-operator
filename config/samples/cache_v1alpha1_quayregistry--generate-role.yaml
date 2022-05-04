@@ -1,0 +1,6 @@
+apiVersion: cache.example.com/v1alpha1
+kind: QuayRegistry--generate-role
+metadata:
+  name: quayregistry--generate-role-sample
+spec:
+  # Add fields here

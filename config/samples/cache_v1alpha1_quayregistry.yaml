@@ -1,0 +1,13 @@
+---
+apiVersion: cache.example.com/v1alpha1
+kind: QuayRegistry
+metadata:
+  name: reponame-demo4
+spec:
+  token: IZAro7mnL7cihYYbOdCy7vUbkyulh3dz3KHj0q5N
+  namespace : feven
+  visibility: public
+  repository: covea
+  image: image
+  state: present
+             
