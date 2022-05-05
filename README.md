@@ -12,8 +12,8 @@ An accessible image registry for operator images (ex. hub.docker.com or quay.io)
 Create a new project with SDK cli specifying the ansible plugin.
 
 ```
-mkdir quay-operator
-cd quay-operator
+mkdir registry-manager-operator 
+cd registry-manager-operator 
 operator-sdk init --plugins=ansible --domain example.com
 ```
 
